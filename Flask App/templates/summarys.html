@@ -1,0 +1,291 @@
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+
+
+  <title>Transcibo Bot</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900&amp;display=swap">
+  
+<style>
+body{
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  background-color: #1C2936;
+}
+#root{
+  position: relative;
+  display: flex;
+  background: #CDC5CF;
+  max-width: 800px;
+  border-radius: 30px;
+  margin-top: 80px;
+  box-shadow: 15px 10px 25px 0px  #0000003b;
+  -webkit-animation: open .5s;
+          animation: open .5s;
+}
+@-webkit-keyframes open {
+  0%  {opacity:0;}
+  100%{opacity:1;}
+}
+@keyframes open {
+  0%  {opacity:0;}
+  100%{opacity:1;}
+}
+
+.text{
+      padding: 40px;
+}
+.menu{
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-bottom: 35px;
+}
+.menu li a{
+  margin: 0 20px 0 0;
+  font-weight: 700;
+  color: black;
+  transition: 0.5s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.menu li a:after{
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #000;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -4px;
+  transition: 0.5s all ease;
+  position: absolute;
+  z-index: 5;
+}
+.menu li a:hover:after{
+  width: 100%;
+}
+
+li a.active{
+  background: #000;
+  padding: 3px 9px 3px 9px;
+  border-radius: 9px;
+  color: white;
+}
+li a.active:hover{
+  background: #000;
+  color: white;
+}
+li a.active:after{
+  display:none;
+}
+h1{
+  font-weight: 800;
+}
+p{
+  max-width: 400px;
+      color: #454545;
+}
+input{
+  color: #054231;
+  width: 160px;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  background: #000;
+  margin-top: 20px;
+}
+input:focus{
+  outline: none;
+}
+h2{
+  text-transform: uppercase;
+  color: #ffffff69;
+  text-align: right;
+  padding-right: 20px;
+  margin: 10px 0 0 0;
+  letter-spacing: 2px;
+  font-size: 40px;
+}
+.fruit{
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.fruit:after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 400px;
+  width: 400px;
+  top: -60px;
+  left: 0;
+}
+.lime:after{
+  border-radius: 57% 51% 48% 56% / 61% 11% 68% 31%;
+  background-image: linear-gradient(to right top, #1C2936,#1C2936, #517CA5, #7FA2BE, #CDC5CF);
+}
+
+.grapes:after{
+  border-radius: 57% 51% 48% 52% / 39% 11% 68% 62% ;
+  background-image: linear-gradient(to right top, #25023d, #300250, #3c0263, #470177, #53008c);
+}
+.grapefruit:after{
+  border-radius: 59% 5% 44% 51% / 48% 11% 68% 31%;
+  background-image: linear-gradient(to right top, #ffd7d7, #ffb6b4, #ff9390, #ff6f6b, #ff4444);
+}
+
+img{
+  max-width: 400px;
+}
+.lime img{
+  margin-top: 35px;
+}
+.grapes img{
+  margin-top: 45px;
+}
+@media screen and (max-width: 750px) {
+  #root {
+    display: block; ;
+  }
+  .fruit:after {
+    top: 0; 
+    left: 20px;
+}
+  h2{
+    text-align: center;
+  }
+  .grapefruit h2{
+    margin-left: 80px;
+  }
+}
+.fa-instagram{
+  position: absolute;
+  color: #000;
+  top: 3%;
+  right: 2%;
+  font-size: 38px;
+}
+.fa-instagram:hover{
+  font-size: 42px;
+  color: #ff4444;
+  transition: all .1s linear;
+  cursor: pointer;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <div id="root"><div class="text"><nav><ul class="menu"><li><a class="lime-link active" href="#/" aria-current="page">SPEECH-TEXT</a></li><li><a class="grapes-link" href="#/grapes">SPEECH-TEXT</a></li><li><a class="grapefruit-link" href="#/grapefruit">Speech-Text</a></li></ul></nav><h1>The Power of Fruits</h1><p>Sed lectus dolor, fringilla ac dapibus nec, molestie ac neque. Vestibulum efficitur magna nec risus tincidunt venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur purus sem, dictum vel ultricies at, faucibus sit amet nisl. Cras sodales mauris sit amet egestas posuere.</p><input type="button" value="More Info"></div><div class="lime fruit"><h2>SPEECH-TEXT</h2><img src="https://github.com/OlgaKoplik/CodePen/blob/master/fruits/3.png?raw=true"></div></div>
+<a target="_blank" title="instagram/web__addict" href="https://www.instagram.com/web__addict/"><i class="fab fa-instagram"></i></a>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/5.0.1/react-router-dom.min.js"></script>
+      <script id="rendered-js">
+const {
+  HashRouter,
+  Switch,
+  Route,
+  NavLink } =
+ReactRouterDOM;
+
+const Menu = () => /*#__PURE__*/
+React.createElement("nav", null, /*#__PURE__*/
+React.createElement("ul", { className: "menu" }, /*#__PURE__*/
+React.createElement("li", null, /*#__PURE__*/React.createElement(NavLink, { to: "/", activeClassName: "active", className: "lime-link", exact: true }, "Transcibo")), /*#__PURE__*/
+React.createElement("li", null, /*#__PURE__*/React.createElement(NavLink, { to: "/grapes", activeClassName: "active", className: "grapes-link" }, "Bot")), /*#__PURE__*/
+React.createElement("li", null, /*#__PURE__*/React.createElement(NavLink, { to: "/grapefruit", activeClassName: "active", className: "grapefruit-link" }, "OP"))));
+
+
+
+
+const Text = ({ children }) => /*#__PURE__*/
+React.createElement("div", { className: "text" },
+children, /*#__PURE__*/
+React.createElement("h1", null, "Transcribo"), /*#__PURE__*/
+
+
+React.createElement("p", null, "Transcribo project transcribes Online video lectures/meetings and Transcribo project transcribes Online video lectures/meetings anTranscribo project transcribes Online video lectures/meetings anTranscribo project transcribes Online video lectures/meetings anTranscribo project transcribes Online video lectures/meetings anTranscribo project transcribes Online video lectures/meetings anTranscribo project transcribes Online video lectures/meetings anTranscribo project transcribes Online video lectures/meetings anTranscribo project transcribes Online video lectures/meetings anadds highlights/topics  to content present in the source, with features which add to the productivity of people working online!"), /*#__PURE__*/
+React.createElement("input", { type: "button", value: "Upload file" }),
+React.createElement("input", { type: "button", value: "Upload file" }));
+
+
+
+const Grapes = () => /*#__PURE__*/
+React.createElement("div", { className: "grapes fruit" }, /*#__PURE__*/
+React.createElement("h2", null, "Speech-Text"), /*#__PURE__*/
+
+
+React.createElement("img", { src: "a.png" }));
+
+
+
+
+const Grapefruit = () => /*#__PURE__*/
+React.createElement("div", { className: "grapefruit fruit" }, /*#__PURE__*/
+React.createElement("h2", null, "Grapefruit"), /*#__PURE__*/
+
+
+React.createElement("img", { src: "s.png" }));
+
+
+
+const Lime = () => /*#__PURE__*/
+React.createElement("div", { className: "lime fruit" }, /*#__PURE__*/
+React.createElement("h2", null, "SPEECH-TEXT"), /*#__PURE__*/
+
+
+React.createElement("img", { src: "s.png" }));
+
+
+const Page = () => /*#__PURE__*/
+React.createElement(HashRouter, null, /*#__PURE__*/
+React.createElement(Text, null, /*#__PURE__*/React.createElement(Menu, null)), /*#__PURE__*/
+React.createElement(Switch, null, /*#__PURE__*/
+React.createElement(Route, { exact: true, path: "/", component: Lime }), /*#__PURE__*/
+React.createElement(Route, { path: "/grapes", component: Grapes }), /*#__PURE__*/
+React.createElement(Route, { path: "/grapefruit", component: Grapefruit })));
+
+
+
+
+
+ReactDOM.render( /*#__PURE__*/
+React.createElement(Page, null),
+document.getElementById('root'));
+//# sourceURL=pen.js
+    </script>
+
+  
+
+
+
+
+ 
+</body></html>
