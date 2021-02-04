@@ -8,14 +8,12 @@ body {
     font-family: 'Nunito';
     background-color: #e6e6e6;
 }
-</style>
-<style>
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color:rgb(56, 184, 56);
 }
 
 li {
@@ -36,8 +34,12 @@ li a:hover {
 
 h1 {text-align: center;}
 
+a{color:rgb(22, 117, 22);
+ text-decoration: none;
+}
+
 .dropbtn {
-  background-color: #3498DB;
+  background-color:rgb(56, 184, 56);
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -46,7 +48,7 @@ h1 {text-align: center;}
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+  background-color:#111;
 }
 
 .dropdown {
@@ -71,6 +73,10 @@ h1 {text-align: center;}
   display: block;
 }
 
+.timetable{
+  text-decoration: underline;
+}
+
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
@@ -78,22 +84,16 @@ h1 {text-align: center;}
 .footer {
   padding: 20px;
   text-align: center;
-  background: #ddd;
+  background: rgb(56, 184, 56);
+  color: white;
 }
 
 
 </style>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
 </head>
 <body>
 
-<h1>Digital University 1.0</h1>
+<h1><b>Digital University 1.0</b></h1>
 
 <ul>
   <li><a class="active" href="#home">Home</a></li>
@@ -113,7 +113,7 @@ h1 {text-align: center;}
   <li><a href="#books">Books</a></li>
 </ul>
 
-<p> Select the class </p>
+<h4> Select the class </h4>
 
 <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Class</button>
@@ -152,9 +152,9 @@ window.onclick = function(event) {
 }
 </script>
 
-<p> Click the subject, to join that class </p>
+<h5> What do you wish to learn?<br> Click on the desired subject to attend the class. </h5>
 
-	<h1>TIME TABLE</h1> 
+	<h1 class = timetable>TIME TABLE</h1> 
 	<table border="5" cellspacing="0" align="center"> 
 		<!--<caption>Timetable</caption>-->
 		<tr> 
@@ -249,7 +249,7 @@ window.onclick = function(event) {
 		</tr> 
 	</table> 
 
-<h3 align="center"> Click the respective subject's book name to download it </h3>
+<h3 align="center"> Click on the respective book to download it </h3>
 
 <table style="width:100%" border="5" cellspacing="0" align="center">
   <tr>
@@ -293,18 +293,17 @@ window.onclick = function(event) {
 
 <h1> Transcribo </h1>
 
-<h2>Input Audio/video file here to get its Full Transcription, Summary and Highlighted Keywords</h2>
-<p> Copy any link of video lectures from youtube and use the <a href = "https://en.savefrom.net/1-youtube-video-downloader-4/"> THIS </a>  link to download it </p>
-<p>Only .mp4 and .mp3 files are allowed</p>
-
-<form action = "http://localhost:5000/uploader" method = "POST" 
-enctype = "multipart/form-data"> 
-<input type="file" name="fileupload" value="fileupload" id="fileupload"> 
-<label for="fileupload"> Select a file to upload</label> 
-<input type="submit" value="submit"> 
+<h2>Input Audio/video file here to get its full transcription, summary and highlighted keywords.</h2>
+<p> YouTube lectures can be downloaded using <a href = "https://en.savefrom.net/1-youtube-video-downloader-4/"> THIS </a>  link. </p>
+<b>OR</b>
+<form action="myform.cgi"> 
+  <label for="fileupload"> Select a file to upload<br></label> 
+  <input type="file" name="fileupload" value="fileupload" id="fileupload">
+  <input type="submit" value="Download"> 
 </form>
+<p>Note: Only .mp4 and .mp3 files are allowed.</p>
 
-<div class="footer" style="padding-top:2% ;">
+<div class="footer">
   <div class="container">
   <div style="text-align:center">
     <h2>Contact Us</h2>
@@ -313,9 +312,9 @@ enctype = "multipart/form-data">
     <div class="column">
       <form action="/action_page.php">
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <input type="text" id="fname" name="firstname" placeholder="Your name">
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name">
         <label for="country">Country</label>
         <select id="country" name="country">
           <option value="India">India</option>
@@ -323,7 +322,7 @@ enctype = "multipart/form-data">
           <option value="usa">USA</option>
         </select>
         <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something here.." style="height:170px"></textarea>
+        <textarea id="subject" name="subject" placeholder="Write something here.." style="resize: none;height:70px;"></textarea>
         <input type="submit" value="Submit">
       </form>
     </div>
