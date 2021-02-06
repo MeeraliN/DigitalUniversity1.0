@@ -14,7 +14,6 @@ to grasp everything quickly during examination.
 Further, they can get the relevant material/books online and 
 Timetable to join the online class, by just tapping the resp. subject!!
 
-To test the live website - https://meeralin.github.io/DigitalUniversity1.0/
 
 One of the sub feature of this project for transcription was used in hackathon CB2.0, which started after HackEd and ended before HackEd Hackathon.
     <br />
