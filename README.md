@@ -16,6 +16,8 @@ Timetable to join the online class, by just tapping the resp. subject!!
 
 
 One of the sub feature of this project for transcription was used in hackathon CB2.0, which started after HackEd and ended before HackEd Hackathon.
+
+To test the project Live - https://meeralin.github.io/DigitalUniversity1.0/home.html
     <br />
     <br />
     <a href="https://github.com/justafolk/Transcribo">View Demo</a>
