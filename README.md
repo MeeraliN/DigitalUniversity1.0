@@ -185,10 +185,6 @@ Team - [@just_a_folk](https://twitter.com/just_a_folk) -
 
 
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet]
-
 
 
 
